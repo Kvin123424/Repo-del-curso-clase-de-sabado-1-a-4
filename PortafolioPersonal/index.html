@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida | Kevin Andres Puentes Mera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-contenido">
+            <p class="saludo">👋 Bienvenido a mi hoja de vida</p>
+            <h1>Kevin Andres Puentes Mera</h1>
+            <p class="subtitulo">Estudiante · Programación · Tecnología</p>
+        </div>
+    </header>
+
+    <section class="presentacion">
+
+        <div class="foto-contenedor">
+            <img src="foto.jpg" alt="Foto de Kevin Andres Puentes Mera">
+        </div>
+
+        <div class="presentacion-texto">
+
+            <span class="etiqueta">SOBRE MÍ</span>
+
+            <h2>Hola, soy Kevin 👋</h2>
+
+            <p>
+                Soy <strong>Kevin Andres Puentes Mera</strong>,
+                estudiante de la Universidad Santiago de Cali.
+            </p>
+
+            <p>
+                Me gusta la programación y tengo interés en seguir
+                aprendiendo sobre tecnología y desarrollo de software.
+            </p>
+
+            <p>
+                Me interesa fortalecer mis conocimientos en desarrollo
+                web, programación y nuevas tecnologías.
+            </p>
+
+            <p>
+                También disfruto montar moto y compartir tiempo
+                con mis amigos y familiares.
+            </p>
+
+            <div class="intereses">
+                <span>💻 Programación</span>
+                <span>🚀 Tecnología</span>
+                <span>🌐 Desarrollo Web</span>
+                <span>🏍️ Motos</span>
+                <span>👨‍👩‍👦 Familia</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <main class="contenedor">
+
+        <section class="tarjeta">
+
+            <div class="icono">📚</div>
+
+            <h2>Historial Académico</h2>
+
+            <div id="listaAcademica"></div>
+
+            <button onclick="agregarEstudio()">
+                + Agregar estudio
+            </button>
+
+        </section>
+
+        <section class="tarjeta">
+
+            <div class="icono">💼</div>
+
+            <h2>Historial Laboral</h2>
+
+            <div id="listaTrabajos"></div>
+
+            <button onclick="agregarTrabajo()">
+                + Agregar trabajo
+            </button>
+
+        </section>
+
+        <section class="tarjeta habilidades">
+
+            <div class="icono">⚡</div>
+
+            <h2>Habilidades</h2>
+
+            <div id="listaHabilidades" class="habilidades-grid"></div>
+
+            <button onclick="agregarHabilidad()">
+                + Agregar habilidad
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h3>Kevin Andres Puentes Mera</h3>
+
+        <p>💻 Hoja de Vida Personal · 2026</p>
+
+        <p class="footer-final">
+            Hecho con HTML, CSS y JavaScript ❤️
+        </p>
+
+    </footer>
+
+    <script>
+
+        const estudios = [
+            {
+                titulo: "Bachillerato",
+                descripcion: "Institución Educativa Cárdenas Mirriñao"
+            },
+            {
+                titulo: "Universidad",
+                descripcion: "Universidad Santiago de Cali"
+            },
+            {
+                titulo: "Cursos",
+                descripcion: "Cursos realizados en línea y presenciales"
+            }
+        ];
+
+        function mostrarEstudios() {
+
+            const lista = document.getElementById("listaAcademica");
+
+            lista.innerHTML = "";
+
+            estudios.forEach(function (estudio) {
+
+                const nuevoEstudio = document.createElement("div");
+
+                nuevoEstudio.className = "item";
+
+                nuevoEstudio.innerHTML = `
+                <h3>🎓 ${estudio.titulo}</h3>
+                <p>${estudio.descripcion}</p>
+            `;
+
+                lista.appendChild(nuevoEstudio);
+
+            });
+
+        }
+
+        function agregarEstudio() {
+
+            const nombre = prompt("Escribe el nombre del estudio:");
+
+            if (nombre !== null && nombre.trim() !== "") {
+
+                const descripcion =
+                    prompt("Escribe la institución o descripción:");
+
+                if (descripcion !== null && descripcion.trim() !== "") {
+
+                    estudios.push({
+                        titulo: nombre,
+                        descripcion: descripcion
+                    });
+
+                    mostrarEstudios();
+
+                }
+
+            }
+
+        }
+
+        const trabajos = [
+            {
+                puesto: "Experiencia laboral",
+                descripcion:
+                    "Actualmente estoy empezando a adquirir experiencia laboral mientras continúo con mis estudios."
+            }
+        ];
+
+        function mostrarTrabajos() {
+
+            const lista = document.getElementById("listaTrabajos");
+
+            lista.innerHTML = "";
+
+            trabajos.forEach(function (trabajo) {
+
+                const nuevoTrabajo = document.createElement("div");
+
+                nuevoTrabajo.className = "item trabajo";
+
+                nuevoTrabajo.innerHTML = `
+                <h3>💼 ${trabajo.puesto}</h3>
+                <p>${trabajo.descripcion}</p>
+            `;
+
+                lista.appendChild(nuevoTrabajo);
+
+            });
+
+        }
+
+        function agregarTrabajo() {
+
+            const puesto =
+                prompt("Escribe el nombre del trabajo o cargo:");
+
+            if (puesto !== null && puesto.trim() !== "") {
+
+                const descripcion =
+                    prompt("Escribe una descripción del trabajo:");
+
+                if (descripcion !== null && descripcion.trim() !== "") {
+
+                    trabajos.push({
+                        puesto: puesto,
+                        descripcion: descripcion
+                    });
+
+                    mostrarTrabajos();
+
+                }
+
+            }
+
+        }
+
+        const habilidades = [
+            {
+                icono: "💻",
+                nombre: "Programación",
+                nivel: "Básico"
+            },
+            {
+                icono: "🌐",
+                nombre: "Desarrollo Web",
+                nivel: "Básico"
+            },
+            {
+                icono: "🎨",
+                nombre: "HTML y CSS",
+                nivel: "Intermedio"
+            },
+            {
+                icono: "🟨",
+                nombre: "JavaScript",
+                nivel: "Básico"
+            },
+            {
+                icono: "🇨🇴",
+                nombre: "Español",
+                nivel: "Nativo"
+            },
+            {
+                icono: "🇺🇸",
+                nombre: "Inglés",
+                nivel: "Básico"
+            }
+        ];
+
+        function mostrarHabilidades() {
+
+            const lista =
+                document.getElementById("listaHabilidades");
+
+            lista.innerHTML = "";
+
+            habilidades.forEach(function (habilidad) {
+
+                const nuevaHabilidad =
+                    document.createElement("div");
+
+                nuevaHabilidad.className = "habilidad";
+
+                nuevaHabilidad.innerHTML = `
+                <span>${habilidad.icono}</span>
+                <p>${habilidad.nombre}</p>
+                <small>Nivel: ${habilidad.nivel}</small>
+            `;
+
+                lista.appendChild(nuevaHabilidad);
+
+            });
+
+        }
+
+        function agregarHabilidad() {
+
+            const nombre =
+                prompt("Escribe la habilidad o idioma:");
+
+            if (nombre !== null && nombre.trim() !== "") {
+
+                const nivel = prompt(
+                    "Escribe el nivel:\n\nEjemplos: Básico, Intermedio, Avanzado, A1, A2, B1, B2, C1 o C2"
+                );
+
+                if (nivel !== null && nivel.trim() !== "") {
+
+                    habilidades.push({
+                        icono: "⚡",
+                        nombre: nombre,
+                        nivel: nivel
+                    });
+
+                    mostrarHabilidades();
+
+                }
+
+            }
+
+        }
+
+        mostrarEstudios();
+        mostrarTrabajos();
+        mostrarHabilidades();
+
+    </script>
+
+</body>
+
+</html>

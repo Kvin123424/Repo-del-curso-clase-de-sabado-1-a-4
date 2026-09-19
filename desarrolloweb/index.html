@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cali Vigilante — Registro Ciudadano de Abusos de Autoridad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Cali Vigilante</h1>
+    <p class="tagline">Registro ciudadano de presuntos abusos de autoridad</p>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reportar.html">Reportar un caso</a></li>
+        <li><a href="casos.html">Ver casos registrados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>¿Qué es esta plataforma?</h2>
+      <p>
+        Este sitio permite a la ciudadanía documentar presuntos casos de abuso
+        de autoridad ocurridos en la ciudad de Cali, con el fin de construir
+        un registro colectivo que sirva de memoria y evidencia.
+      </p>
+    </section>
+
+    <section id="formulario-rapido" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Registrar un nuevo caso</h2>
+
+      <form id="form-reporte">
+        <div class="campo">
+          <label for="fecha">Fecha del hecho</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="campo">
+          <label for="lugar">Lugar (barrio / comuna)</label>
+          <input type="text" id="lugar" name="lugar" placeholder="Ej: Comuna 15, Cali" required>
+        </div>
+
+        <div class="campo">
+          <label for="descripcion">Descripción del hecho</label>
+          <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="autoridad">Autoridad involucrada</label>
+          <select id="autoridad" name="autoridad">
+            <option value="policia">Policía Nacional</option>
+            <option value="esmad">ESMAD</option>
+            <option value="ejercito">Ejército</option>
+            <option value="otra">Otra</option>
+          </select>
+        </div>
+
+        <button type="submit">Enviar reporte</button>
+      </form>
+    </section>
+
+    <section id="lista-casos" aria-labelledby="titulo-casos">
+      <h2 id="titulo-casos">Casos registrados</h2>
+      <div id="contenedor-casos" class="casos-grid">
+        <!-- Aquí JavaScript insertará las tarjetas de cada reporte -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Proyecto académico — Curso de Desarrollo Web. Datos de ejemplo, no representan casos reales.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
