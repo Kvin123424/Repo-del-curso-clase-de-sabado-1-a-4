@@ -1,0 +1,82 @@
+[
+  {
+    "titulo": "Watchmen",
+    "autorNombre": "Alan Moore",
+    "editorial": "DC Comics",
+    "anioPublicacion": 1986,
+    "precio": 65000,
+    "stock": 10
+  },
+  {
+    "titulo": "V for Vendetta",
+    "autorNombre": "Alan Moore",
+    "editorial": "DC Comics",
+    "anioPublicacion": 1982,
+    "precio": 55000,
+    "stock": 7
+  },
+  {
+    "titulo": "From Hell",
+    "autorNombre": "Alan Moore",
+    "editorial": "Eddie Campbell Comics",
+    "anioPublicacion": 1989,
+    "precio": 70000,
+    "stock": 3
+  },
+  {
+    "titulo": "Batman: The Dark Knight Returns",
+    "autorNombre": "Frank Miller",
+    "editorial": "DC Comics",
+    "anioPublicacion": 1986,
+    "precio": 52000,
+    "stock": 8
+  },
+  {
+    "titulo": "Batman: Year One",
+    "autorNombre": "Frank Miller",
+    "editorial": "DC Comics",
+    "anioPublicacion": 1987,
+    "precio": 48000,
+    "stock": 6
+  },
+  {
+    "titulo": "Sin City: The Hard Goodbye",
+    "autorNombre": "Frank Miller",
+    "editorial": "Dark Horse Comics",
+    "anioPublicacion": 1991,
+    "precio": 58000,
+    "stock": 4
+  },
+  {
+    "titulo": "The Sandman: Preludes & Nocturnes",
+    "autorNombre": "Neil Gaiman",
+    "editorial": "DC Comics",
+    "anioPublicacion": 1989,
+    "precio": 60000,
+    "stock": 9
+  },
+  {
+    "titulo": "Maus",
+    "autorNombre": "Art Spiegelman",
+    "editorial": "Pantheon Books",
+    "anioPublicacion": 1986,
+    "precio": 72000,
+    "stock": 5
+  },
+  {
+    "titulo": "Saga, Vol. 1",
+    "autorNombre": "Brian K. Vaughan",
+    "editorial": "Image Comics",
+    "anioPublicacion": 2012,
+    "precio": 50000,
+    "stock": 12
+  },
+  {
+    "titulo": "Y: The Last Man, Vol. 1",
+    "autorNombre": "Brian K. Vaughan",
+    "editorial": "DC Comics",
+    "anioPublicacion": 2002,
+    "precio": 54000,
+    "stock": 2
+  }
+]

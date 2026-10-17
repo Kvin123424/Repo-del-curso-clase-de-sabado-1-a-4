@@ -1,0 +1,3 @@
+"mongodb+srv://cluster0.b2hvgxy.mongodb.net/" --username usr_db_comics
+PORT=3000
+MONGODB_URI=mongodb+srv://cluster0.b2hvgxy.mongodb.net/" --username usr_db_comics

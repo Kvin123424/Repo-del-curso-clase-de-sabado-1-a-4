@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "Alan Moore",
+    "nacionalidad": "Británica",
+    "fechaNacimiento": "1953-11-18"
+  },
+  {
+    "nombre": "Frank Miller",
+    "nacionalidad": "Estadounidense",
+    "fechaNacimiento": "1957-01-27"
+  },
+  {
+    "nombre": "Neil Gaiman",
+    "nacionalidad": "Británica",
+    "fechaNacimiento": "1960-11-10"
+  },
+  {
+    "nombre": "Art Spiegelman",
+    "nacionalidad": "Estadounidense",
+    "fechaNacimiento": "1948-02-15"
+  },
+  {
+    "nombre": "Brian K. Vaughan",
+    "nacionalidad": "Estadounidense",
+    "fechaNacimiento": "1976-07-17"
+  }
+]
