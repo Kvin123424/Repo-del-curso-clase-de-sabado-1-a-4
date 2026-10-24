@@ -8,6 +8,7 @@ const app = express();
 
 // Middleware: permite leer el cuerpo de las peticiones en formato JSON
 app.use(express.json());
+app.use(express.static("public")); // ← NUEVO: sirve los archivos de la carpeta public
 
 // Ruta de prueba
 app.get("/", (req, res) => {

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Cómics</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <h1>🦸 Tienda de Cómics</h1>
+    <p>Cliente web para la API REST</p>
+  </header>
+
+  <main class="contenedor">
+    <!-- Aquí se muestran los avisos de éxito o de error -->
+    <p id="mensaje" class="mensaje" hidden></p>
+
+    <!-- ========== CONSULTAR ========== -->
+    <section class="tarjeta">
+      <h2>Consultar cómics</h2>
+
+      <form id="form-filtros" class="filtros">
+        <label>
+          Autor
+          <select id="filtro-autor"></select>
+        </label>
+
+        <label>
+          Editorial
+          <select id="filtro-editorial"></select>
+        </label>
+
+        <button type="submit">Buscar</button>
+        <button type="button" id="btn-limpiar" class="secundario">Limpiar</button>
+      </form>
+
+      <p id="contador" class="contador"></p>
+      <div id="lista-comics" class="grid-comics"></div>
+    </section>
+
+    <!-- ========== AGREGAR ========== -->
+    <div class="dos-columnas">
+      <section class="tarjeta">
+        <h2>Agregar autor</h2>
+        <form id="form-autor" class="formulario">
+          <label>
+            Nombre *
+            <input type="text" name="nombre" required>
+          </label>
+          <label>
+            Nacionalidad
+            <input type="text" name="nacionalidad">
+          </label>
+          <label>
+            Fecha de nacimiento
+            <input type="date" name="fechaNacimiento">
+          </label>
+          <button type="submit">Guardar autor</button>
+        </form>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Agregar cómic</h2>
+        <form id="form-comic" class="formulario">
+          <label>
+            Título *
+            <input type="text" name="titulo" required>
+          </label>
+          <label>
+            Autor *
+            <select id="comic-autor" name="autor" required></select>
+          </label>
+          <label>
+            Editorial
+            <input type="text" name="editorial">
+          </label>
+          <label>
+            Año de publicación
+            <input type="number" name="anioPublicacion" min="1900" max="2100">
+          </label>
+          <label>
+            Precio (COP) *
+            <input type="number" name="precio" min="0" step="1" required>
+          </label>
+          <label>
+            Stock
+            <input type="number" name="stock" min="0" step="1" value="0">
+          </label>
+          <button type="submit">Guardar cómic</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- type="module" permite usar import/export en el JavaScript -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

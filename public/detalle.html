@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Cómic</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #f4f4f9; color: #333; }
+        .contenedor { max-width: 600px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .precio { font-size: 24px; color: #2e7d32; font-weight: bold; margin: 15px 0; }
+        .volver { display: inline-block; margin-top: 20px; color: #0066cc; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="contenedor" id="detalle-box">
+        <h1 id="comic-titulo">Cargando detalles...</h1>
+        <h3 id="comic-autor">...</h3>
+        <p><strong>Editorial:</strong> <span id="comic-editorial"></span></p>
+        <p><strong>Año:</strong> <span id="comic-anio"></span></p>
+        <p class="precio" id="comic-precio"></p>
+        <p><strong>Unidades disponibles (Stock):</strong> <span id="comic-stock"></span></p>
+        
+        <a href="index.html" class="volver">← Volver al catálogo principal</a>
+    </div>
+
+    <script src="js/detalle.js"></script>
+</body>
+</html>

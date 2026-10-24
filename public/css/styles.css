@@ -1,0 +1,179 @@
+/* ---------- Variables: colores y medidas reutilizables ---------- */
+:root {
+  --color-primario: #d62828;
+  --color-fondo: #f4f1ea;
+  --color-tarjeta: #ffffff;
+  --color-texto: #1d1d1f;
+  --color-suave: #6c6a63;
+  --color-borde: #d9d4c7;
+  --radio: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+/* ---------- Encabezado y contenedor ---------- */
+.encabezado {
+  background: var(--color-primario);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.encabezado h1 {
+  margin: 0;
+}
+
+.encabezado p {
+  margin: 0.25rem 0 0;
+  opacity: 0.9;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.tarjeta {
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.25rem;
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+}
+
+/* Dos columnas que pasan a una sola en pantallas angostas */
+.dos-columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ---------- Formularios ---------- */
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 400;
+}
+
+button {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--color-primario);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+button.secundario {
+  background: var(--color-suave);
+}
+
+.formulario {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+/* ---------- Lista de cómics ---------- */
+.contador {
+  color: var(--color-suave);
+  margin: 1rem 0 0.5rem;
+}
+
+.grid-comics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.comic {
+  border: 1px solid var(--color-borde);
+  border-left: 5px solid var(--color-primario);
+  border-radius: var(--radio);
+  padding: 1rem;
+}
+
+.comic h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.comic p {
+  margin: 0.15rem 0;
+  font-size: 0.9rem;
+}
+
+.comic .precio {
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--color-suave);
+}
+
+/* ---------- Mensajes ---------- */
+.mensaje {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radio);
+  font-weight: 600;
+}
+
+.mensaje[hidden] {
+  display: none;
+}
+
+.mensaje.ok {
+  background: #e3f5e8;
+  color: #1b6e34;
+  border: 1px solid #2a9d4b;
+}
+
+.mensaje.error {
+  background: #fde8ea;
+  color: #8f0f19;
+  border: 1px solid #c1121f;
+}
